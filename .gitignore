@@ -1,0 +1,87 @@
+# General Python ignores
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+
+# Virtual environment
+venv/
+.env/
+*.venv/
+env/
+Pipfile.lock
+poetry.lock
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Logs and debugging
+*.log
+*.out
+*.err
+*.swp
+*.swo
+*.swn
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Byte-compiled / package files
+*.egg-info/
+dist/
+build/
+*.egg
+*.manifest
+*.spec
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.iml
+
+# pytest, coverage and profiling reports
+htmlcov/
+*.cover
+.coverage
+*.py,cover
+.cache
+nosetests.xml
+coverage.xml
+*.prof
+.profraw
+
+# MyPy type checker
+.mypy_cache/
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# Docker-related ignores (if using Docker)
+*.dockerfile
+*.dockerignore
+
+# Ignore database files
+*.sqlite3
+*.db
+
+# Ignore compiled files (Cython, C extensions)
+*.c
+*.o
+*.so
+*.dll
+
+# If using Jupyter Lab
+.jupyter/
+.ipynb_checkpoints/
+lab/
+
+# If using PyCharm
+*.idea/
