@@ -10,6 +10,7 @@ class LinearRegression():
         self.n_iterations = n_iterations
         self.weights = None
         self.biases = None
+        self.history = {"loss": []} # for keeping track of the loss in every iteration
         
     def fit(self, X, y):
         n_samples, n_features = X.shape
@@ -23,9 +24,13 @@ class LinearRegression():
             db = (2 / n_samples) * np.sum(y_pred - y)
             
             self.weights -= self.learning_rate * dw
-            logger.info(f"{i+1} iteration, weight: {self.weights} ")
+            print(f"{i+1} iteration, weight: {self.weights} ")
             self.bias -= self.learning_rate * db
-            logger.info(f"{i+1} iteration, bias: {self.bias} ")
+            print(f"{i+1} iteration, bias: {self.bias} ")
+            
+            loss = np.mean((y_pred - y) ** 2)
+            self.history['loss'].append(loss)
+            print(f"{i+1} iteration, loss: {loss}")
         
     def predict(self, X):
         y_pred = np.dot(X, self.weights) + self.bias
