@@ -2,7 +2,7 @@ import numpy as np
 
 def z_score_normalize(X):
     mean = np.mean(X, axis=0)
-    std = np.std(X, axios =0)
+    std = np.std(X, axis =0)
     
     std[std == 0] = 1 # To prevent zero division error
     
